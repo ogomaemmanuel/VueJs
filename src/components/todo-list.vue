@@ -15,7 +15,7 @@
             <td>{{todo.createDate}}</td>
             <td>{{todo.description}}</td>
             <td>{{todo.startDate}}</td>
-            <td><button type="button" @click="deleteToDo(todo)">Delete</button></td>
+            <td><button class="button" type="button" @click="deleteToDo(todo)">Delete</button></td>
         </tr>
         <tbody>
 
@@ -40,6 +40,7 @@ export default {
     methods:{
         deleteToDo:function(todoToDelete){
             //this.todos=this.todos.filter(todo => todo.id!==todoToDelete.id );
+            this.todos.$remove(todoToDelete);
             this.$emit("user-deleted",id);
 
         }

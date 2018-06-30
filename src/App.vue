@@ -1,14 +1,14 @@
 <template>
     <div id="app">
-       <todo></todo>
+       <home></home>
     </div>
 </template>
 
 <script>
-    import todo from "./components/todo.vue"
+    import home from "./components/home.vue"
     export default {
      components:{
-         todo,
+         home,
      }
 
     }

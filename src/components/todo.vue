@@ -4,7 +4,7 @@
             <input v-model="todo.title" id="todo-title-txt" type="text"></input>
             <input v-model="todo.description" id="todo-description-txt" type="text"></input>
             <input v-model="todo.startDate" id="todo-start-date" type="datetime-local"></input>
-            <button @click="addTodo()" type="button">Add ToDo</button>
+            <button class="button" @click="addTodo()" type="button">Add ToDo</button>
             <todo_list v-on:user-deleted="alertUserDeleted(deletedUser)" :todos="todos"></todo_list>
             <spa v-if="todoDeleted">
                 {{deletedTodoTitle}}
@@ -39,6 +39,7 @@
             },
             showDeleteMessage(deteletedYser){
                 console.log()
+                deletedTodoTitle=deteletedYser.description;
                 this.todoDeleted=true;
 
             }
