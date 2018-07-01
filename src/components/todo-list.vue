@@ -10,6 +10,8 @@
             <th></th>
         </tr>
         </thead>
+
+        <tbody>
         <tr v-for="todo in todos">
             <td>{{todo.id}}</td>
             <td>{{todo.createDate}}</td>
@@ -17,8 +19,6 @@
             <td>{{todo.startDate}}</td>
             <td><button class="button" type="button" @click="deleteToDo(todo)">Delete</button></td>
         </tr>
-        <tbody>
-
         </tbody>
     </table>
 
