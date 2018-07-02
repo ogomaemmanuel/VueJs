@@ -37,7 +37,7 @@
 <script>
 
     import side_menu from './side-menu.vue'
-   //import { EventBus } from './event-bus.js';
+   import { EventBus } from './event-bus.js';
 
 
     export default {
@@ -49,11 +49,12 @@
             }
 
         },
-        mounted(){
+        created(){
+            let vm = this;
 
-            window.EventBus.$on("recordCreated",function (data) {
+            EventBus.$on("recordCreated",function (data) {
 
-                 this.alertmessage= data;
+                 vm.alertmessage= data;
 
             })
         },

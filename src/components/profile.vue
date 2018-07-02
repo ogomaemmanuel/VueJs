@@ -87,11 +87,11 @@ export  default{
     },
     methods:{
         showComposeMessage:function () {
-            this. current_mail_page="compose_mail";
+            this.current_mail_page="compose_mail";
 
         },
         showInbox: function () {
-            this. current_mail_page="mail_inbox";
+            this.current_mail_page="mail_inbox";
 
         },
         showSettings:function () {
