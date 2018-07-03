@@ -53,7 +53,7 @@
 <script>
     import mail_inbox from "./mail_inbox.vue"
     import compose_mail from "./compose_mail.vue";
-    import loading_alert from './loading_alert.vue'
+    import loading_alert from '../loading_alert.vue'
     const settingsComponent = () => ({
 
         component: import('./settings.vue'),

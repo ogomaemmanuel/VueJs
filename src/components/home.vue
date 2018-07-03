@@ -21,6 +21,11 @@
                     <li>
                         <router-link to="/mynotes">Saved Notes</router-link>
                     </li>
+
+                    <li>
+                        <router-link to="/blog">My Blogs</router-link>
+                    </li>
+
                 </ul>
 
             </div>
@@ -37,7 +42,7 @@
 <script>
 
     import side_menu from './side-menu.vue'
-   import { EventBus } from './event-bus.js';
+   import { EventBus } from '../event-bus.js';
 
 
     export default {

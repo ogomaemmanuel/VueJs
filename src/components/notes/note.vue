@@ -29,7 +29,7 @@
 </template>
 <script>
     import note_list from "./note-list.vue";
-  import { EventBus } from './event-bus.js';
+  import { EventBus } from '../../event-bus.js';
 
     export default {
         components: {
@@ -55,7 +55,7 @@
         methods: {
             addNote: function () {
                 this.notes.push(this.note);
-                let vm = this;
+                //let vm = this;
 
                 EventBus.$emit("recordCreated", "New Note");
                 this.note={
