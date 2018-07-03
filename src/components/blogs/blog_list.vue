@@ -6,16 +6,20 @@
             <th>Id</th>
             <th>Title</th>
             <th>Body</th>
+
             </thead>
             <tbody>
             <tr :key="post.id" v-for="post in getBlogs">
                 <td>{{post.userId}}</td>
                 <td>{{post.id}}</td>
                 <td>{{post.title}}</td>
-                <td>{{post.body}}</td>
+                <td>{{post.body}}
+                    <router-link :to="{ name: 'blogdetail', params: {blogId: post.id } }">more..</router-link>
+                </td>
             </tr>
             </tbody>
         </table>
+        <router-view></router-view>
 
     </div>
 </template>

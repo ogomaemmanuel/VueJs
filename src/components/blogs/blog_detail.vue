@@ -1,5 +1,7 @@
 <template>
     <div>
+        <h4>{{getBlogById.title}}</h4>
+        <p>{{getBlogById.body}}</p>
 
     </div>
 
@@ -12,10 +14,17 @@
             }
         },
         created(){
-            this.blogId = this.$route.params.id;
+            this.blogId = this.$route.params.blogId;
+            this.$store.dispatch("getBlogById",this.blogId);
         },
         mounted(){
 
+
+        },
+        computed:{
+            getBlogById(){
+                return this.$store.getters.blogById;
+            }
         }
     }
 </script>
