@@ -21,7 +21,10 @@ const mutations = {
     GET_BLOG_BY_ID(state,newBlogById){
         state.blogById=newBlogById;
 
-    }
+    },
+   // DELETE_BLOG(state,blogId){
+
+    //}
 };
 const getters={
     blogs:state=>state.blogs,
